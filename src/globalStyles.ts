@@ -4,9 +4,11 @@ export const root = {
   primaryBgColor: '#01020a',
   primaryTextColor: '#fffecb',
   secondaryBgColor: '#fffecb',
+  secondaryLightBgColor: 'rgba(255,254,203,.1)',
   borderColor: '#fffecb',
   secondaryTextColor: '#01020a',
   oddColor: '#fea82f',
+  opaqueOddColor: 'rgba(254, 168, 47, .8)',
 };
 
 const GlobalStyles = createGlobalStyle`
@@ -31,6 +33,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: .5px;
+    line-height: 1.5;
 }
 
 input,

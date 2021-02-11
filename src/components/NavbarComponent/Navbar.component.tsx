@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      window.scrollY > 50 ? setScroll(true) : setScroll(false);
+      window.scrollY > 100 ? setScroll(true) : setScroll(false);
     });
   }, []);
 

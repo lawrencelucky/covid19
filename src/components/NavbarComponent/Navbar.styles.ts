@@ -9,6 +9,7 @@ interface INavProps {
 export const Nav = styled.nav<INavProps>`
   position: fixed;
   left: 0;
+  z-index: 999;
   width: 100%;
   transition: all 0.3s linear;
   border-bottom: ${({ isScrolled }) =>
@@ -17,7 +18,7 @@ export const Nav = styled.nav<INavProps>`
 `;
 
 export const NavbarContainer = styled(Container)<INavProps>`
-  padding: ${({ isScrolled }) => (isScrolled ? '1.5rem' : '2rem')};
+  padding: ${({ isScrolled }) => (isScrolled ? '1.5rem' : '2.5rem')};
   transition: all 0.3s linear;
 `;
 

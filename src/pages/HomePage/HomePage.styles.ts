@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container, root } from './../../globalStyles';
 
 export const HomePageContainer = styled(Container)`
-  padding: 15rem 2rem;
+  padding: 15rem 2.5rem;
 `;
 
 export const BannerSection = styled.section`
@@ -17,12 +17,14 @@ export const BannerDescriptionContainer = styled.div`
 export const BannerDescriptionCaption = styled.h4`
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  color: ${root.opaqueOddColor};
 `;
 
 export const BannerDescriptionHeader = styled.h2`
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 3rem;
+  color: ${root.oddColor};
 `;
 
 export const BannerDescriptionBody = styled.p`
