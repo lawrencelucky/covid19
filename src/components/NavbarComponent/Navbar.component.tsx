@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-import { Nav, NavbarContainer, NavLogo } from './Navbar.styles';
+import {
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  NavLogoLink,
+  NavMenu,
+  NavMenuLink,
+} from './Navbar.styles';
 
 const Navbar: React.FC = () => {
   const [scroll, setScroll] = useState(false);
@@ -15,7 +22,13 @@ const Navbar: React.FC = () => {
     <>
       <Nav isScrolled={scroll}>
         <NavbarContainer isScrolled={scroll}>
-          <NavLogo>Covid.</NavLogo>
+          <NavLogo>
+            <NavLogoLink to='/'>Covid.</NavLogoLink>
+          </NavLogo>
+
+          <NavMenu>
+            <NavMenuLink to='/statistics'>Check the statistics</NavMenuLink>
+          </NavMenu>
         </NavbarContainer>
       </Nav>
     </>

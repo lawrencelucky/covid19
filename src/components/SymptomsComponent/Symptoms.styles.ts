@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container, root } from './../../globalStyles';
 
 export const SymptomsContainer = styled(Container)`
-  padding: 10rem 0;
+  padding: 10rem 0 0;
 `;
 
 export const SymptomsHeaderContainer = styled.div`

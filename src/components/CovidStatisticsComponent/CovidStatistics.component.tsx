@@ -100,7 +100,7 @@ const CovidStatistics = () => {
   }, [lastUpdated]);
 
   const fetchCovidStatistics = async () => {
-    const response = await fetch('https://corona.lmao.ninja/v2/all?yesterday');
+    const response = await fetch('https://disease.sh/v3/covid-19/all');
     const data = await response.json();
 
     setLastUpdated(data?.updated);

@@ -24,12 +24,12 @@ export const CardsLeftContainer = styled.div`
   top: 5rem;
 `;
 
-export const StayHomeCard = styled.div`
+export const PreventionCard = styled.div`
   border: 1px dashed ${root.borderColor};
   width: 300px;
 `;
 
-export const StayHomeCardHead = styled.div`
+export const PreventionCardHead = styled.div`
   display: grid;
   place-items: center;
   height: 200px;
@@ -41,53 +41,23 @@ export const HomeIcon = styled(Home)`
   color: ${root.oddColor};
 `;
 
-export const StayHomeCardBody = styled.div`
+export const PreventionCardBody = styled.div`
   padding: 3rem;
-  height: 100%;
-  max-height: 200px;
 `;
 
-export const StayHomeCardTitle = styled.h3`
+export const PreventionCardTitle = styled.h3`
   font-size: 2rem;
   color: ${root.oddColor};
   margin-bottom: 2rem;
 `;
 
-export const StayHomeCardText = styled.p`
+export const PreventionCardText = styled.p`
   font-size: 1.6rem;
-`;
-
-export const WearMaskCard = styled.div`
-  border: 1px dashed ${root.borderColor};
-  width: 300px;
-`;
-
-export const WearMaskCardHead = styled.div`
-  display: grid;
-  place-items: center;
-  height: 200px;
-  background: ${root.secondaryLightBgColor};
 `;
 
 export const MaskIcon = styled(HeadSideMask)`
   width: 7rem;
   color: ${root.oddColor};
-`;
-
-export const WearMaskCardBody = styled.div`
-  padding: 3rem;
-  height: 100%;
-  max-height: 200px;
-`;
-
-export const WearMaskCardTitle = styled.h3`
-  font-size: 2rem;
-  color: ${root.oddColor};
-  margin-bottom: 2rem;
-`;
-
-export const WearMaskCardText = styled.p`
-  font-size: 1.6rem;
 `;
 
 export const CardsRightContainer = styled.div`
@@ -97,70 +67,14 @@ export const CardsRightContainer = styled.div`
   left: 53%;
 `;
 
-export const SocialDistanceCard = styled.div`
-  border: 1px dashed ${root.borderColor};
-  width: 300px;
-`;
-
-export const SocialDistanceCardHead = styled.div`
-  display: grid;
-  place-items: center;
-  height: 200px;
-  background: ${root.secondaryLightBgColor};
-`;
-
 export const SocialDistanceIcon = styled(SocialDistance)`
   width: 7rem;
   color: ${root.oddColor};
 `;
 
-export const SocialDistanceCardBody = styled.div`
-  padding: 3rem;
-  height: 100%;
-  max-height: 200px;
-`;
-
-export const SocialDistanceCardTitle = styled.h3`
-  font-size: 2rem;
-  color: ${root.oddColor};
-  margin-bottom: 2rem;
-`;
-
-export const SocialDistanceCardText = styled.p`
-  font-size: 1.6rem;
-`;
-
-export const WashHandsCard = styled.div`
-  border: 1px dashed ${root.borderColor};
-  width: 300px;
-`;
-
-export const WashHandsCardHead = styled.div`
-  display: grid;
-  place-items: center;
-  height: 200px;
-  background: ${root.secondaryLightBgColor};
-`;
-
 export const HandsWashIcon = styled(HandsWash)`
   width: 7rem;
   color: ${root.oddColor};
-`;
-
-export const WashHandsCardBody = styled.div`
-  padding: 3rem;
-  height: 100%;
-  max-height: 200px;
-`;
-
-export const WashHandsCardTitle = styled.h3`
-  font-size: 2rem;
-  color: ${root.oddColor};
-  margin-bottom: 2rem;
-`;
-
-export const WashHandsCardText = styled.p`
-  font-size: 1.6rem;
 `;
 
 export const HowToPreventDescriptionContainer = styled.div``;

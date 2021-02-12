@@ -4,31 +4,16 @@ import {
   HowToPreventContainer,
   HowToPreventCardsContainer,
   CardsLeftContainer,
-  StayHomeCard,
-  StayHomeCardBody,
-  StayHomeCardTitle,
-  StayHomeCardText,
-  StayHomeCardHead,
+  PreventionCard,
+  PreventionCardBody,
+  PreventionCardTitle,
+  PreventionCardText,
+  PreventionCardHead,
   HomeIcon,
-  WearMaskCard,
-  WearMaskCardHead,
   MaskIcon,
-  WearMaskCardBody,
-  WearMaskCardTitle,
-  WearMaskCardText,
   CardsRightContainer,
-  SocialDistanceCard,
-  SocialDistanceCardHead,
   SocialDistanceIcon,
-  SocialDistanceCardBody,
-  SocialDistanceCardTitle,
-  SocialDistanceCardText,
-  WashHandsCard,
-  WashHandsCardBody,
-  WashHandsCardHead,
   HandsWashIcon,
-  WashHandsCardText,
-  WashHandsCardTitle,
   HowToPreventDescriptionContainer,
   HowToPreventHeader,
   HowToPreventText,
@@ -41,63 +26,61 @@ const HowToPrevent = () => {
     <HowToPreventContainer>
       <HowToPreventCardsContainer>
         <CardsLeftContainer>
-          <StayHomeCard>
-            <StayHomeCardHead>
+          <PreventionCard>
+            <PreventionCardHead>
               <HomeIcon />
-            </StayHomeCardHead>
+            </PreventionCardHead>
 
-            <StayHomeCardBody>
-              <StayHomeCardTitle>Stay at Home</StayHomeCardTitle>
-              <StayHomeCardText>
+            <PreventionCardBody>
+              <PreventionCardTitle>Stay at Home</PreventionCardTitle>
+              <PreventionCardText>
                 Stay home and self-isolate even if you have minor symptoms such
                 as cough, headache, mild fever, until you recover.
-              </StayHomeCardText>
-            </StayHomeCardBody>
-          </StayHomeCard>
+              </PreventionCardText>
+            </PreventionCardBody>
+          </PreventionCard>
 
-          <WearMaskCard>
-            <WearMaskCardHead>
+          <PreventionCard>
+            <PreventionCardHead>
               <MaskIcon />
-            </WearMaskCardHead>
+            </PreventionCardHead>
 
-            <WearMaskCardBody>
-              <WearMaskCardTitle>Wear a Mask</WearMaskCardTitle>
-              <WearMaskCardText>
+            <PreventionCardBody>
+              <PreventionCardTitle>Wear a Mask</PreventionCardTitle>
+              <PreventionCardText>
                 Masks are a simple barrier to help prevent your respiratory
                 droplets from reaching others and vice-versa.
-              </WearMaskCardText>
-            </WearMaskCardBody>
-          </WearMaskCard>
+              </PreventionCardText>
+            </PreventionCardBody>
+          </PreventionCard>
         </CardsLeftContainer>
         <CardsRightContainer>
-          <SocialDistanceCard>
-            <SocialDistanceCardHead>
+          <PreventionCard>
+            <PreventionCardHead>
               <SocialDistanceIcon />
-            </SocialDistanceCardHead>
+            </PreventionCardHead>
 
-            <SocialDistanceCardBody>
-              <SocialDistanceCardTitle>
-                Social Distancing
-              </SocialDistanceCardTitle>
-              <SocialDistanceCardText>
+            <PreventionCardBody>
+              <PreventionCardTitle>Social Distancing</PreventionCardTitle>
+              <PreventionCardText>
                 When you do go out in public, leave at least 6 feet of space
                 between you and others.
-              </SocialDistanceCardText>
-            </SocialDistanceCardBody>
-          </SocialDistanceCard>
+              </PreventionCardText>
+            </PreventionCardBody>
+          </PreventionCard>
 
-          <WashHandsCard>
-            <WashHandsCardHead>
+          <PreventionCard>
+            <PreventionCardHead>
               <HandsWashIcon />
-            </WashHandsCardHead>
+            </PreventionCardHead>
 
-            <WashHandsCardBody>
-              <WashHandsCardTitle>Wash your hands</WashHandsCardTitle>
-              <WashHandsCardText>
+            <PreventionCardBody>
+              <PreventionCardTitle>Wash your hands</PreventionCardTitle>
+              <PreventionCardText>
                 Wash your hands well and often. Try not to touch your face.
-              </WashHandsCardText>
-            </WashHandsCardBody>
-          </WashHandsCard>
+              </PreventionCardText>
+            </PreventionCardBody>
+          </PreventionCard>
         </CardsRightContainer>
       </HowToPreventCardsContainer>
 
