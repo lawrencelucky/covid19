@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 
 import {
   StatisticsPageContainer,
@@ -6,32 +6,17 @@ import {
   WorldwideContainer,
 } from './Statistics.styles';
 
-const WorldwideStatistics = lazy(
-  () =>
-    import(
-      '../../components/WorldwideStatisticsComponent/WorldwideStatistics.component'
-    )
-);
-
-const CountriesStatistics = lazy(
-  () =>
-    import(
-      './../../components/CountriesStatisticsComponent/CountriesStatistics.component'
-    )
-);
+import WorldwideStatistics from '../../components/WorldwideStatisticsComponent/WorldwideStatistics.component';
+import CountriesStatistics from './../../components/CountriesStatisticsComponent/CountriesStatistics.component';
 
 const StatisticsPage = () => {
   return (
     <StatisticsPageContainer>
       <CountriesContainer>
-        <Suspense fallback={<div>loading...</div>}>
-          <CountriesStatistics />
-        </Suspense>
+        <CountriesStatistics />
       </CountriesContainer>
       <WorldwideContainer>
-        <Suspense fallback={<div>loading...</div>}>
-          <WorldwideStatistics />
-        </Suspense>
+        <WorldwideStatistics />
       </WorldwideContainer>
     </StatisticsPageContainer>
   );

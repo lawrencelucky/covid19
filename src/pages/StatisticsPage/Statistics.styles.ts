@@ -14,7 +14,7 @@ export const CountriesContainer = styled.div`
   place-items: center;
   padding: 1rem;
   margin-right: 1rem;
-  height: 120vh;
+  height: 80vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
