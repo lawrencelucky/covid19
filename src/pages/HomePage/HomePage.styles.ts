@@ -4,20 +4,43 @@ import { Container, root } from './../../globalStyles';
 
 export const HomePageContainer = styled(Container)`
   padding: 15rem 2.5rem;
+
+  @media screen and (max-width: 650px) {
+    padding: 15rem 2.5rem 5rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 12rem 1rem 5rem;
+  }
 `;
 
 export const BannerSection = styled.section`
   display: flex;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 export const BannerDescriptionContainer = styled.div`
   flex: 0.5;
+
+  @media screen and (max-width: 1034px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const BannerDescriptionCaption = styled.h4`
   font-size: 1.4rem;
   margin-bottom: 1rem;
   color: ${root.opaqueOddColor};
+
+  @media screen and (max-width: 370px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const BannerDescriptionHeader = styled.h2`
@@ -25,10 +48,30 @@ export const BannerDescriptionHeader = styled.h2`
   font-weight: 600;
   margin-bottom: 3rem;
   color: ${root.oddColor};
+
+  @media screen and (max-width: 370px) {
+    font-size: 2.4rem;
+  }
+
+  @media screen and (max-width: 340px) {
+    font-size: 2rem;
+  }
 `;
 
 export const BannerDescriptionBody = styled.p`
   width: 80%;
+
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 370px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const BannerButton = styled.button`
@@ -41,6 +84,10 @@ export const BannerButton = styled.button`
   cursor: pointer;
   position: relative;
   transition: color 0.5s linear;
+
+  @media screen and (max-width: 370px) {
+    font-size: 1.4rem;
+  }
 
   &:hover {
     color: ${root.secondaryTextColor};
@@ -68,8 +115,21 @@ export const BannerButton = styled.button`
 
 export const BannerImageContainer = styled.div`
   flex: 0.5;
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const BannerImage = styled.img`
   width: 100%;
+
+  @media screen and (max-width: 1024px) {
+    width: 75%;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;

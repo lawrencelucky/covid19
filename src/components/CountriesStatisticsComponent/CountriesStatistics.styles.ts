@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Search } from '@styled-icons/feather/Search';
 
 import { root } from './../../globalStyles';
 
@@ -11,6 +12,38 @@ export const StatisticsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+  position: relative;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-gap: 0.5rem;
+  }
+`;
+
+export const StatisticsLoaderContainer = styled.div``;
+
+export const SearchCaseContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  background: ${root.secondaryLightBgColor};
+  padding: 1rem;
+  width: 100%;
+`;
+
+export const SearchInput = styled.input`
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: ${root.primaryTextColor};
+`;
+
+export const SearchIcon = styled(Search)`
+  width: 2rem;
+  cursor: pointer;
 `;
 
 export const LoadMoreCasesButton = styled.button`
@@ -23,6 +56,10 @@ export const LoadMoreCasesButton = styled.button`
   cursor: pointer;
   position: relative;
   transition: color 0.5s linear;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 
   &:hover {
     color: ${root.secondaryTextColor};

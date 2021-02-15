@@ -7,9 +7,18 @@ export const FooterContainer = styled(Container)`
   padding: 5rem 2.5rem;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
-export const FooterSocialMedia = styled.div``;
+export const FooterSocialMedia = styled.div`
+  @media screen and (max-width: 650px) {
+    margin-bottom: 1.5rem;
+  }
+`;
 
 export const SocialMediaLink = styled.a`
   &:not(:last-child) {
@@ -65,6 +74,7 @@ export const FooterRightsContainer = styled.div``;
 
 export const FooterRights = styled.p`
   font-size: 1.4rem;
+  text-align: center;
 `;
 
 export const FooterRightsLink = styled.a`

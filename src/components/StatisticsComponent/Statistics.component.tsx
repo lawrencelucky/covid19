@@ -67,7 +67,7 @@ const Statistics: FC<IStatistics> = ({
           ) : (
             <>
               <LastUpdated>{lastUpdated}</LastUpdated>
-              <CaseDescription>Last Updated</CaseDescription>
+              <CaseDescription lastUpdated={true}>Last Updated</CaseDescription>
             </>
           )}
         </LastUpdatedContainer>
@@ -76,35 +76,45 @@ const Statistics: FC<IStatistics> = ({
       <CasesContainer>
         <CaseWrapper>
           <TotalCases>{totalCases}</TotalCases>
-          <CaseDescription>Total Cases</CaseDescription>
+          <CaseDescription totalCase={true}>Total Cases</CaseDescription>
         </CaseWrapper>
         <CaseWrapper>
           <TodayCase>{todayCase}</TodayCase>
-          <CaseDescription>Today's Case</CaseDescription>
+          <CaseDescription todayCase={true}>Today's Case</CaseDescription>
         </CaseWrapper>
         <CaseWrapper>
           <TotalRecoveredCases>{totalRecoveredCase}</TotalRecoveredCases>
-          <CaseDescription>Total Recovered Cases</CaseDescription>
+          <CaseDescription totalRecovered={true}>
+            Total Recovered Cases
+          </CaseDescription>
         </CaseWrapper>
         <CaseWrapper>
           <TodayRecoveredCases>{todayRecoveredCase}</TodayRecoveredCases>
-          <CaseDescription>Today's Recovered Cases</CaseDescription>
+          <CaseDescription todayRecovered={true}>
+            Today's Recovered Cases
+          </CaseDescription>
         </CaseWrapper>
         <CaseWrapper>
           <TotalDeathCases>{totalDeathCase}</TotalDeathCases>
-          <CaseDescription>Total Death Cases</CaseDescription>
+          <CaseDescription totalDeath={true}>Total Death Cases</CaseDescription>
         </CaseWrapper>
         <CaseWrapper>
           <TodayDeathCases>{todayDeathCase}</TodayDeathCases>
-          <CaseDescription>Today's Death Cases</CaseDescription>
+          <CaseDescription todayDeath={true}>
+            Today's Death Cases
+          </CaseDescription>
         </CaseWrapper>
         <CaseWrapper>
           <ActiveCases>{activeCase}</ActiveCases>
-          <CaseDescription>Current Active Cases</CaseDescription>
+          <CaseDescription activeCase={true}>
+            Current Active Cases
+          </CaseDescription>
         </CaseWrapper>
         <CaseWrapper>
           <CriticalCases>{criticalCase}</CriticalCases>
-          <CaseDescription>Current Critical Cases</CaseDescription>
+          <CaseDescription criticalCase={true}>
+            Current Critical Cases
+          </CaseDescription>
         </CaseWrapper>
       </CasesContainer>
     </StatisticsContainer>

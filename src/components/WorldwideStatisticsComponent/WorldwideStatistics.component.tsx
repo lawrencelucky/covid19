@@ -18,8 +18,8 @@ const WorldwideStatistics = () => {
   const [month, setMonth] = useState<string>('');
   const [date, setDate] = useState<number>(0);
   const [year, setYear] = useState<number>(0);
-  const [hour, setHour] = useState<number>(0);
-  const [minute, setMinute] = useState<number>(0);
+  const [hour, setHour] = useState<string>('');
+  const [minute, setMinute] = useState<string>('');
   const [timeOfDay, setTimeOfDay] = useState<string>();
 
   useEffect(() => {
@@ -72,20 +72,20 @@ const WorldwideStatistics = () => {
   useEffect(() => {
     const dateObject: Date = new Date(lastUpdated);
 
-    let hr = dateObject.getHours();
+    let hr = dateObject.getHours().toString();
 
-    if (hr < 10) {
-      hr = parseInt(`0${hr}`);
-    }
-
-    if (hr >= 12) {
+    if (parseInt(hr) >= 12) {
       setTimeOfDay('pm');
     } else {
       setTimeOfDay('am');
     }
 
-    if (hr >= 13) {
-      hr = parseInt(`${+hr - 12}`);
+    if (parseInt(hr) >= 13) {
+      hr = `${+hr - 12}`;
+    }
+
+    if (parseInt(hr) < 10) {
+      hr = `0${hr}`;
     }
 
     setHour(hr);
@@ -94,10 +94,10 @@ const WorldwideStatistics = () => {
   useEffect(() => {
     const dateObject: Date = new Date(lastUpdated);
 
-    let min = dateObject.getMinutes();
+    let min = dateObject.getMinutes().toString();
 
-    if (min < 10) {
-      min = parseInt(`0${min}`);
+    if (parseInt(min) < 10) {
+      min = `0${min}`;
     }
 
     setMinute(min);

@@ -28,9 +28,9 @@ const CovidStatistics = () => {
   const [month, setMonth] = useState<string>();
   const [date, setDate] = useState<number>();
   const [year, setYear] = useState<number>();
-  const [hour, setHour] = useState<number>();
-  const [minute, setMinute] = useState<number>();
-  const [timeZone, setTimeZone] = useState<string>();
+  const [hour, setHour] = useState<string>('');
+  const [minute, setMinute] = useState<string>('');
+  const [timeOfDay, setTimeOfDay] = useState<string>();
 
   useEffect(() => {
     fetchCovidStatistics();
@@ -81,22 +81,34 @@ const CovidStatistics = () => {
 
   useEffect(() => {
     const dateObject: Date = new Date(lastUpdated);
+    let hr = dateObject.getHours().toString();
 
-    setHour(dateObject.getHours());
+    if (parseInt(hr) >= 12) {
+      setTimeOfDay('pm');
+    } else {
+      setTimeOfDay('am');
+    }
+
+    if (parseInt(hr) >= 13) {
+      hr = `${+hr - 12}`;
+    }
+
+    if (parseInt(hr) < 10) {
+      hr = `0${hr}`;
+    }
+
+    setHour(hr);
   }, [lastUpdated]);
 
   useEffect(() => {
     const dateObject: Date = new Date(lastUpdated);
+    let min = dateObject.getMinutes().toString();
 
-    setMinute(dateObject.getMinutes());
-  }, [lastUpdated]);
+    if (parseInt(min) < 10) {
+      min = `0${min}`;
+    }
 
-  useEffect(() => {
-    const dateObject: Date = new Date(lastUpdated);
-
-    setTimeZone(`
-      ${dateObject.toString().split(' ')[5].slice(0, 3)}
-      ${dateObject.toString().split(' ')[5].slice(3, 6)}`);
+    setMinute(min);
   }, [lastUpdated]);
 
   const fetchCovidStatistics = async () => {
@@ -142,7 +154,7 @@ const CovidStatistics = () => {
       </CovidStatisticsUpdateContainer>
 
       <CovidStatisticsFooter>
-        Last updated: {month}, {date} {year}. {hour}:{minute} {timeZone}.
+        Last updated: {month}, {date} {year}. {hour}:{minute} {timeOfDay}.
       </CovidStatisticsFooter>
     </CovidStatisticsContainer>
   );

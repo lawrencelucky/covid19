@@ -39,4 +39,8 @@ export const NavMenuLink = styled(Link)`
   text-decoration: none;
   color: ${root.oddColor};
   font-weight: 400;
+
+  @media screen and (max-width: 375px) {
+    font-size: 1.4rem;
+  }
 `;
