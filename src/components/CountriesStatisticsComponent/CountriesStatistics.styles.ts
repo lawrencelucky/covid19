@@ -61,10 +61,6 @@ export const LoadMoreCasesButton = styled.button`
     cursor: not-allowed;
   }
 
-  &:hover {
-    color: ${root.secondaryTextColor};
-  }
-
   &::before {
     content: '';
     position: absolute;

@@ -2,13 +2,13 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const root = {
   primaryBgColor: '#01020a',
-  primaryTextColor: '#fffecb',
-  secondaryBgColor: '#fffecb',
+  primaryTextColor: '#fafafa',
+  secondaryBgColor: '#fafafa',
   secondaryLightBgColor: 'rgba(255,254,203,.1)',
-  borderColor: '#fffecb',
+  borderColor: '#fafafa',
   secondaryTextColor: '#01020a',
-  oddColor: '#fea82f',
-  opaqueOddColor: 'rgba(254, 168, 47, .8)',
+  oddColor: '#0c7b93',
+  opaqueOddColor: 'rgba(12, 123, 147, .8)',
 };
 
 const GlobalStyles = createGlobalStyle`

@@ -89,10 +89,6 @@ export const BannerButton = styled.button`
     font-size: 1.4rem;
   }
 
-  &:hover {
-    color: ${root.secondaryTextColor};
-  }
-
   &::before {
     content: '';
     position: absolute;
